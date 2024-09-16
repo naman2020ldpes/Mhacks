@@ -10,8 +10,13 @@
             var number = document.getElementById('numberInput').value;
             // Store it in localStorage
             localStorage.setItem('storedNumber', number);
-            // Optionally clear the value after a certain period
-            setTimeout(() => localStorage.removeItem('storedNumber'), 10000); // Clear after 10 seconds
+        }
+
+        function clearStorage() {
+            // Remove the specific item or clear all localStorage
+            localStorage.removeItem('storedNumber');
+            // If you want to clear all localStorage, use:
+            // localStorage.clear();
         }
     </script>
 </head>
@@ -19,6 +24,7 @@
     <h1>Parent Page</h1>
     <input type="number" id="numberInput" placeholder="Enter a number">
     <button onclick="storeNumber()">Submit</button>
+    <button onclick="clearStorage()">Clear Stored Data</button>
     <!-- Add other content if needed -->
 </body>
 </html>
