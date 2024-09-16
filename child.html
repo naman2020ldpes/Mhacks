@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Page</title>
+    <script>
+        window.onload = function() {
+            // Retrieve the number from localStorage
+            var number = localStorage.getItem('storedNumber');
+            if (number) {
+                // Display the number
+                document.getElementById('numberDisplay').textContent = number;
+            } else {
+                document.getElementById('numberDisplay').textContent = 'No number stored';
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>Child Page</h1>
+    <p>Number from parent page: <span id="numberDisplay">No number stored</span></p>
+    <!-- Add other content if needed -->
+</body>
+</html>
